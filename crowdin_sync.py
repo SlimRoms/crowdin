@@ -36,11 +36,6 @@ from xml.dom import minidom
 
 ############################################ FUNCTIONS #############################################
 
-def get_default_branch(xml):
-    xml_default = xml.getElementsByTagName('default')[0]
-    xml_default_revision = xml_default.attributes['revision'].value
-    return re.search('refs/heads/(.*)', xml_default_revision).groups()[0]
-
 def push_as_commit(path, name, branch, username):
     print('Committing ' + name + ' on branch ' + branch)
 
@@ -92,7 +87,7 @@ username = argsdict['username']
 
 ############################################# PREPARE ##############################################
 
-print('\nSTEP 0A: Checking dependencies')
+print('\nSTEP 0: Checking dependencies')
 # Check for Ruby version of crowdin-cli
 if subprocess.check_output(['rvm', 'all', 'do', 'gem', 'list', 'crowdin-cli', '-i']) == 'true':
     sys.exit('You have not installed crowdin-cli. Terminating.')
@@ -129,16 +124,6 @@ if not os.path.isfile('crowdin/extra_packages.xml'):
 else:
     print('Found: crowdin/extra_packages.xml')
 
-print('\nSTEP 0B: Define shared variables')
-
-# Variables regarding platform_manifest/default.xml
-print('Loading: platform_manifest/default.xml')
-xml_android = minidom.parse('platform_manifest/default.xml')
-
-# Default branch
-default_branch = get_default_branch(xml_android)
-print('Default branch: ' + default_branch)
-
 ############################################### MAIN ###############################################
 
 if not args.no_upload:
@@ -172,6 +157,7 @@ if not args.no_download:
     proc.wait() # Wait for the above to finish
 
     print('\nSTEP 5: Upload to Gerrit')
+    xml_android = minidom.parse('platform_manifest/default.xml')
     xml_extra = minidom.parse('crowdin/extra_packages.xml')
     items = xml_android.getElementsByTagName('project')
     items += xml_extra.getElementsByTagName('project')
@@ -217,7 +203,7 @@ if not args.no_download:
             if project_item.hasAttribute('revision'):
                 branch = project_item.attributes['revision'].value
             else:
-                branch = default_branch
+                branch = 'kk4.4'
 
             push_as_commit(result, project_item.attributes['name'].value, branch, username)
 else:
