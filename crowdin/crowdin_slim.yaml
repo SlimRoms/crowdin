@@ -88,6 +88,9 @@ files:
       - /frameworks/base/packages/SystemUI/res/values/slim_arrays.xml
       - /packages/apps/Camera2/res/values/slim_arrays.xml
       - /packages/apps/DeskClock/res/values/slim_arrays.xml
+      - /packages/apps/Launcher2/**/*.xml
+      - /packages/apps/Launcher3/**/*.xml
+      - /packages/apps/SamsungServiceMode/**/*.xml
       - /packages/apps/SlimLauncher/res/values/slim_arrays.xml
       - /packages/services/Telephony/res/values/slim_arrays.xml
       - /device/**/overlay/**/*.xml
@@ -145,6 +148,18 @@ files:
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
+  # SlimCenter
+  -
+    source:      '/packages/apps/SlimCenter/res/values/strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
+  # SlimFileManager
+  -
+    source:      '/packages/apps/SlimFileManager/res/values/strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
   # Torch
   -
     source:      '/packages/apps/Torch/res/values/strings.xml'
@@ -158,9 +173,3 @@ files:
     languages_mapping: *anchor
 
 # Device specific packages
-
-  # SamsungServiceMode
-  -
-    source:      '/packages/apps/SamsungServiceMode/res/values/strings.xml'
-    translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: *anchor
