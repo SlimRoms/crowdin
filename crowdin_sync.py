@@ -3,9 +3,10 @@
 # crowdin_sync.py
 #
 # Updates Crowdin source translations and pushes translations
-# directly to CyanogenMod's Gerrit.
+# directly to SlimRom's Gerrit.
 #
 # Copyright (C) 2014 The CyanogenMod Project
+# Modifications Copyright (C) 2014 SlimRoms
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -68,22 +69,22 @@ def push_as_commit(path, name, branch, username):
 
     # Push commit
     try:
-        repo.git.push('ssh://' + username + '@review.cyanogenmod.org:29418/' + name, 'HEAD:refs/for/' + branch + '%topic=translation')
+        repo.git.push('ssh://' + username + '@gerrit.slimroms.net:29418/SlimRoms/' + name, 'HEAD:refs/for/' + branch + '%topic=translation')
         print('Succesfully pushed commit for ' + name)
     except:
         print('Failed to push commit for ' + name)
 
 ####################################################################################################
 
-print('Welcome to the CM Crowdin sync script!')
+print('Welcome to the SlimRom Crowdin sync script!')
 
 ####################################################################################################
 
-parser = argparse.ArgumentParser(description='Synchronising CyanogenMod\'s translations with Crowdin')
+parser = argparse.ArgumentParser(description='Synchronising SlimRom\'s translations with Crowdin')
 sync = parser.add_mutually_exclusive_group()
 parser.add_argument('-u', '--username', help='Gerrit username', required=True)
-sync.add_argument('--no-upload', action='store_true', help='Only download CM translations from Crowdin')
-sync.add_argument('--no-download', action='store_true', help='Only upload CM source translations to Crowdin')
+sync.add_argument('--no-upload', action='store_true', help='Only download SlimRom translations from Crowdin')
+sync.add_argument('--no-download', action='store_true', help='Only upload SlimRom source translations to Crowdin')
 args = parser.parse_args()
 argsdict = vars(args)
 
@@ -105,34 +106,22 @@ except:
     sys.exit('You have not installed repo. Terminating.')
 
 # Check for android/default.xml
-if not os.path.isfile('android/default.xml'):
-    sys.exit('You have no android/default.xml. Terminating.')
+if not os.path.isfile('platform_manifest/default.xml'):
+    sys.exit('You have no platform_manifest/default.xml. Terminating.')
 else:
     print('Found: android/default.xml')
 
-# Check for crowdin/config_aosp.yaml
-if not os.path.isfile('crowdin/config_aosp.yaml'):
-    sys.exit('You have no crowdin/config_aosp.yaml. Terminating.')
+# Check for crowdin/config_slim.yaml
+if not os.path.isfile('crowdin/config_slim.yaml'):
+    sys.exit('You have no crowdin/config_slim.yaml. Terminating.')
 else:
-    print('Found: crowdin/config_aosp.yaml')
+    print('Found: crowdin/config_slim.yaml')
 
-# Check for crowdin/config_cm.yaml
-if not os.path.isfile('crowdin/config_cm.yaml'):
-    sys.exit('You have no crowdin/config_cm.yaml. Terminating.')
+# Check for crowdin/crowdin_slim.yaml
+if not os.path.isfile('crowdin/crowdin_slim.yaml'):
+    sys.exit('You have no crowdin/crowdin_slim.yaml. Terminating.')
 else:
-    print('Found: crowdin/config_cm.yaml')
-
-# Check for crowdin/crowdin_aosp.yaml
-if not os.path.isfile('crowdin/crowdin_aosp.yaml'):
-    sys.exit('You have no crowdin/crowdin_aosp.yaml. Terminating.')
-else:
-    print('Found: crowdin/crowdin_aosp.yaml')
-
-# Check for crowdin/crowdin_cm.yaml
-if not os.path.isfile('crowdin/crowdin_cm.yaml'):
-    sys.exit('You have no crowdin/crowdin_cm.yaml. Terminating.')
-else:
-    print('Found: crowdin/crowdin_cm.yaml')
+    print('Found: crowdin/crowdin_slim.yaml')
 
 # Check for crowdin/extra_packages.xml
 if not os.path.isfile('crowdin/extra_packages.xml'):
@@ -142,9 +131,9 @@ else:
 
 print('\nSTEP 0B: Define shared variables')
 
-# Variables regarding android/default.xml
-print('Loading: android/default.xml')
-xml_android = minidom.parse('android/default.xml')
+# Variables regarding platform_manifest/default.xml
+print('Loading: platform_manifest/default.xml')
+xml_android = minidom.parse('platform_manifest/default.xml')
 
 # Default branch
 default_branch = get_default_branch(xml_android)
@@ -154,13 +143,9 @@ print('Default branch: ' + default_branch)
 
 if not args.no_upload:
     print('\nSTEP 1: Upload Crowdin source translations')
-    print('Uploading Crowdin source translations (non-AOSP supported languages)')
-    # Execute 'crowdin-cli upload sources' and show output
-    print(subprocess.check_output(['crowdin-cli', '--config=crowdin/crowdin_aosp.yaml', '--identity=crowdin/config_aosp.yaml', 'upload', 'sources']))
-
     print('Uploading Crowdin source translations (AOSP supported languages)')
     # Execute 'crowdin-cli upload sources' and show output
-    print(subprocess.check_output(['crowdin-cli', '--config=crowdin/crowdin_cm.yaml', '--identity=crowdin/config_cm.yaml', 'upload', 'sources']))
+    print(subprocess.check_output(['crowdin-cli', '--config=crowdin/crowdin_slim.yaml', '--identity=crowdin/config_slim.yaml', 'upload', 'sources']))
 else:
     print('\nSkipping source translations upload')
 
@@ -168,11 +153,7 @@ if not args.no_download:
     print('\nSTEP 2: Download Crowdin translations')
     print('Downloading Crowdin translations (AOSP supported languages)')
     # Execute 'crowdin-cli download' and show output
-    print(subprocess.check_output(['crowdin-cli', '--config=crowdin/crowdin_cm.yaml', '--identity=crowdin/config_cm.yaml', 'download']))
-
-    print('Downloading Crowdin translations (non-AOSP supported languages)')
-    # Execute 'crowdin-cli download' and show output
-    print(subprocess.check_output(['crowdin-cli', '--config=crowdin/crowdin_aosp.yaml', '--identity=crowdin/config_aosp.yaml', 'download']))
+    print(subprocess.check_output(['crowdin-cli', '--config=crowdin/crowdin_slim.yaml', '--identity=crowdin/config_slim.yaml', 'download']))
 
     print('\nSTEP 3: Remove useless empty translations')
     # Some line of code that I found to find all XML files
@@ -187,7 +168,7 @@ if not args.no_download:
 
     print('\nSTEP 4: Create a list of pushable translations')
     # Get all files that Crowdin pushed
-    proc = subprocess.Popen(['crowdin-cli --config=crowdin/crowdin_cm.yaml --identity=crowdin/config_cm.yaml list sources && crowdin-cli --config=crowdin/crowdin_aosp.yaml --identity=crowdin/config_aosp.yaml list sources'], stdout=subprocess.PIPE, shell=True)
+    proc = subprocess.Popen(['crowdin-cli --config=crowdin/crowdin_slim.yaml --identity=crowdin/config_slim.yaml list sources'], stdout=subprocess.PIPE, shell=True)
     proc.wait() # Wait for the above to finish
 
     print('\nSTEP 5: Upload to Gerrit')
@@ -204,7 +185,7 @@ if not args.no_download:
             continue
 
         # Get project root dir from Crowdin's output by regex
-        m = re.search('/(.*Superuser)/Superuser.*|/(.*LatinIME).*|/(frameworks/base).*|/(.*CMFileManager).*|/(.*CMHome).*|/(device/.*/.*)/.*/res/values.*|/(hardware/.*/.*)/.*/res/values.*|/(.*)/res/values.*', path)
+        m = re.search('/(.*Superuser)/Superuser.*|/(.*LatinIME).*|/(frameworks/base).*|/(device/.*/.*)/.*/res/values.*|/(hardware/.*/.*)/.*/res/values.*|/(.*)/res/values.*', path)
 
         if not m.groups():
             # Regex result is empty, warn the user

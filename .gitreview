@@ -1,5 +1,5 @@
 [gerrit]
-host=review.cyanogenmod.org
+host=gerrit.slimroms.net
 port=29418
-project=CyanogenMod/cm_crowdin
-defaultbranch=master
+project=SlimRoms/slim_crowdin
+defaultbranch=kk4.4
