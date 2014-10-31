@@ -85,12 +85,14 @@ files:
       - /kk4.4/**/slim_integers.xml
       - /kk4.4/**/slim_styles.xml
       - /kk4.4/frameworks/base/core/res/res/values/slim_arrays.xml
+      - /kk4.4/frameworks/base/core/res/res/values/slim_symbols.xml
       - /kk4.4/frameworks/base/packages/SystemUI/res/values/slim_arrays.xml
       - /kk4.4/packages/apps/Camera2/res/values/slim_arrays.xml
       - /kk4.4/packages/apps/DeskClock/res/values/slim_arrays.xml
       - /kk4.4/packages/apps/Launcher2/**/*.xml
       - /kk4.4/packages/apps/Launcher3/**/*.xml
       - /kk4.4/packages/apps/SamsungServiceMode/**/*.xml
+      - /kk4.4/packages/apps/Settings/res/values/slim_ids.xml
       - /kk4.4/packages/apps/SlimLauncher/res/values/slim_arrays.xml
       - /kk4.4/packages/services/Telephony/res/values/slim_arrays.xml
       - /kk4.4/device/**/overlay/**/*.xml
