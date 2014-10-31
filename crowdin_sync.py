@@ -111,14 +111,8 @@ print('Loading: platform_manifest/default.xml')
 xml_android = minidom.parse('platform_manifest/default.xml')
 
 # Default branch
-default_branch = get_default_branch(xml_android)
+default_branch = 'kk4.4'
 print('Default branch: ' + default_branch)
-
-# Check for crowdin/config.yaml
-if not os.path.isfile('crowdin/config.yaml'):
-    sys.exit('You have no crowdin/config.yaml. Terminating.')
-else:
-    print('Found: crowdin/config.yaml')
 
 # Check for crowdin/extra_packages_' + default_branch + '.xml
 if not os.path.isfile('crowdin/extra_packages_' + default_branch + '.xml'):
@@ -172,7 +166,6 @@ if not args.no_download:
     proc.wait() # Wait for the above to finish
 
     print('\nSTEP 5: Upload to Gerrit')
-    xml_android = minidom.parse('platform_manifest/default.xml')
     xml_extra = minidom.parse('crowdin/extra_packages_' + default_branch + '.xml')
     items = xml_android.getElementsByTagName('project')
     items += xml_extra.getElementsByTagName('project')
@@ -218,7 +211,7 @@ if not args.no_download:
             if project_item.hasAttribute('revision'):
                 branch = project_item.attributes['revision'].value
             else:
-                branch = 'kk4.4'
+                branch = default_branch
 
             push_as_commit(result, project_item.attributes['name'].value, branch, username)
 else:
