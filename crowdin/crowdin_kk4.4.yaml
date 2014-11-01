@@ -93,6 +93,7 @@ files:
       - /kk4.4/packages/apps/DeskClock/res/values/slim_arrays.xml
       - /kk4.4/packages/apps/Launcher2/**/*.xml
       - /kk4.4/packages/apps/Launcher3/**/*.xml
+      - /kk4.4/packages/apps/Mms/res/values/slim_arrays.xml
       - /kk4.4/packages/apps/SamsungServiceMode/**/*.xml
       - /kk4.4/packages/apps/Settings/res/values/slim_arrays.xml
       - /kk4.4/packages/apps/Settings/res/values/slim_ids.xml
