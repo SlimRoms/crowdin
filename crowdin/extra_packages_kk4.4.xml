@@ -4,5 +4,11 @@
   <!-- TODO -->
 
   <!-- Device repositories that can be translated -->
-  <!-- TODO -->
+  <project name="android_device_htc_m7-common" path="device/htc/m7-common" remote="slimroms" revision="kk4.4" />
+  <project name="android_device_samsung_aries-common" path="device/samsung/aries-common" remote="slimroms" revision="kk4.4" />
+  <project name="android_device_samsung_i9100g" path="device/samsung/i9100g" remote="slimroms" revision="kk4.4" />
+  <project name="android_device_samsung_p3100" path="device/samsung/p3100" remote="slimroms" revision="kk4.4" />
+  <project name="android_device_samsung_p5100" path="device/samsung/p5100" remote="slimroms" revision="kk4.4" />
+  <project name="android_device_samsung_smdk4412-common" path="device/samsung/smdk4412-common" remote="slimroms" revision="kk4.4" />
+
 </manifest>
