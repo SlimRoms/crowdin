@@ -1,0 +1,96 @@
+# crowdin_slim.yaml
+#
+# Crowdin configuration file for SlimRoms
+#
+# Copyright (C) 2014 The CyanogenMod Project
+# Modifications Copyright (C) 2014 SlimRoms
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#   http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+project_identifier: SlimRoms
+preserve_hierarchy: true
+
+files:
+  # CAF Frameworks
+  -
+    source:      '/kk4.4-caf/frameworks/base/**/values/slim_*.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: &anchor
+      android_code:
+        af: af
+        am: am
+        ar: ar
+        az: az
+        be: be
+        bg: bg
+        ca: ca
+        cs: cs
+        cy: cy
+        da: da
+        de: de
+        el: el
+        es-ES: es
+        et: et
+        fa: fa
+        fi: fi
+        fr: fr
+        he: iw
+        hi: hi
+        hr: hr
+        hu: hu
+        hy-AM: hy
+        id: in
+        it: it
+        ja: ja
+        ka: ka
+        km: km
+        ko: ko
+        lo: lo
+        lt: lt
+        lv: lv
+        mn: mn
+        ms: ms
+        nb: nb
+        ne-NP: ne
+        nl: nl
+        pl: pl
+        rm-CH: rm
+        ro: ro
+        ru: ru
+        si-LK: si
+        sk: sk
+        sl: sl
+        sr: sr
+        sv-SE: sv
+        sw: sw
+        th: th
+        tl: tl
+        tr: tr
+        uk: uk
+        vi: vi
+        zu: zu
+    ignore:
+      - /kk4.4-caf/**/slim_attrs.xml
+      - /kk4.4-caf/**/slim_dimens.xml
+      - /kk4.4-caf/**/slim_donottranslate.xml
+      - /kk4.4-caf/**/slim_integers.xml
+      - /kk4.4-caf/**/slim_styles.xml
+      - /kk4.4-caf/frameworks/base/core/res/res/values/slim_arrays.xml
+      - /kk4.4-caf/frameworks/base/core/res/res/values/slim_symbols.xml
+      - /kk4.4-caf/frameworks/base/packages/SystemUI/res/values/slim_arrays.xml
+
+  # Default for device apps
+  -
+    source:      '/kk4.4-caf/packages/apps/Settings/**/values/slim_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
