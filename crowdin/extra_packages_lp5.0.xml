@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <!-- Extra packages not included in the main manifest -->
+  <!-- TODO -->
+
+  <!-- Device repositories that can be translated -->
+  <project name="SlimRoms/device_htc_m7-common" path="device/htc/m7-common" remote="github" revision="lp5.0" />
+  <project name="SlimRoms/device_samsung_p3100" path="device/samsung/p3100" remote="github" revision="lp5.0" />
+  <project name="SlimRoms/device_samsung_smdk4412-common" path="device/samsung/smdk4412-common" remote="github" revision="lp5.0" />
+
+</manifest>

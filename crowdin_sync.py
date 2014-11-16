@@ -111,7 +111,7 @@ print('Loading: platform_manifest/default.xml')
 xml_android = minidom.parse('platform_manifest/default.xml')
 
 # Default branch
-default_branch = 'kk4.4'
+default_branch = 'lp5.0'
 print('Default branch: ' + default_branch)
 
 # Check for crowdin/extra_packages_' + default_branch + '.xml
