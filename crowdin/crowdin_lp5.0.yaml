@@ -99,6 +99,8 @@ files:
       - /lp5.0/packages/providers/DownloadProvider/res/values/slim_strings.xml
       - /lp5.0/packages/services/Telephony/res/values/slim_arrays.xml
       - /lp5.0/device/**/overlay/**/*.xml
+      - /lp5.0/device/**/common-overlay/**/*.xml
+      - /lp5.0/device/**/overlay-common/**/*.xml
       - /lp5.0/development/**/*.xml
 
   # Default for device apps
