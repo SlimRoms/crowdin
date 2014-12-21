@@ -139,16 +139,6 @@ files:
 
 # Other projects
 
-  # DSPManager
-  -
-    source:      '/lp5.0/packages/apps/DSPManager/res/values/strings.xml'
-    translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: *anchor
-  -
-    source:      '/lp5.0/packages/apps/DSPManager/res/values/arrays.xml'
-    translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: *anchor
-
   # SlimCenter
   -
     source:      '/lp5.0/packages/apps/SlimCenter/res/values/strings.xml'
