@@ -21,9 +21,11 @@ project_identifier: SlimRoms
 preserve_hierarchy: true
 
 files:
-  # Default for AOSP projects with custom additions
+# Frameworks
+
+ # framework-res
   -
-    source:      '/lp5.0/**/values/slim_*.xml'
+    source:      '/lp5.0/frameworks/base/core/res/res/values/slim_strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: &anchor
       android_code:
@@ -79,65 +81,63 @@ files:
         uk: uk
         vi: vi
         zu: zu
-    ignore:
-      - /lp5.0/**/slim_attrs.xml
-      - /lp5.0/**/slim_dimens.xml
-      - /lp5.0/**/slim_donottranslate.xml
-      - /lp5.0/**/slim_integers.xml
-      - /lp5.0/**/slim_styles.xml
-      - /lp5.0/frameworks/base/core/res/res/values/slim_arrays.xml
-      - /lp5.0/frameworks/base/core/res/res/values/slim_symbols.xml
-      - /lp5.0/frameworks/base/packages/SystemUI/res/values/slim_arrays.xml
-      - /lp5.0/packages/apps/Camera2/res/values/slim_arrays.xml
-      - /lp5.0/packages/apps/Dialer/res/values/slim_arrays.xml
-      - /lp5.0/packages/apps/DeskClock/res/values/slim_arrays.xml
-      - /lp5.0/packages/apps/Mms/res/values/slim_arrays.xml
-      - /lp5.0/packages/apps/SamsungServiceMode/**/*.xml
-      - /lp5.0/packages/apps/Settings/res/values/slim_arrays.xml
-      - /lp5.0/packages/apps/Settings/res/values/slim_ids.xml
-      - /lp5.0/packages/apps/SlimLauncher/res/values/slim_arrays.xml
-      - /lp5.0/packages/providers/DownloadProvider/res/values/slim_strings.xml
-      - /lp5.0/packages/services/Telephony/res/values/slim_arrays.xml
-      - /lp5.0/device/**/overlay/**/*.xml
-      - /lp5.0/device/**/common-overlay/**/*.xml
-      - /lp5.0/device/**/overlay-common/**/*.xml
-      - /lp5.0/development/**/*.xml
 
-  # Default for device apps
+ # Keyguard
   -
-    source:      '/lp5.0/device/**/values/arrays.xml'
+    source:      '/lp5.0/frameworks/base/packages/Keyguard/res/values/slim_strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: *anchor
-    ignore:
-      - /lp5.0/device/google/**/*.xml
-      - /lp5.0/device/sample/**/*.xml
-      - /lp5.0/device/samsung/p3100/DeviceSettings/res/values/arrays.xml
-      - /lp5.0/device/samsung/p5100/DeviceSettings/res/values/arrays.xml
-      - /lp5.0/device/**/common-overlay/**/*.xml
-      - /lp5.0/device/**/overlay/**/*.xml
-      - /lp5.0/device/**/overlay-common/**/*.xml
-  -
-    source:      '/lp5.0/device/**/values/plurals.xml'
-    translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: *anchor
-    ignore:
-      - /lp5.0/device/google/**/*.xml
-      - /lp5.0/device/sample/**/*.xml
-      - /lp5.0/device/**/common-overlay/**/*.xml
-      - /lp5.0/device/**/overlay/**/*.xml
-      - /lp5.0/device/**/overlay-common/**/*.xml
-  -
-    source:      '/lp5.0/device/**/values/strings.xml'
-    translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: *anchor
-    ignore:
-      - /lp5.0/device/google/**/*.xml
-      - /lp5.0/device/sample/**/*.xml
-      - /lp5.0/device/**/common-overlay/**/*.xml
-      - /lp5.0/device/**/overlay/**/*.xml
-      - /lp5.0/device/**/overlay-common/**/*.xml
+    languages_mapping: &anchor
 
-# Other projects
+ # SystemUI
+  -
+    source:      '/lp5.0/frameworks/base/packages/SystemUI/res/values/slim_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: &anchor
+
+
+# Packages
+
+  # Contacts
+  -
+    source:      '/lp5.0/packages/apps/Contacts/res/values/slim_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
+  # DeskClock
+  -
+    source:      '/lp5.0/packages/apps/DeskClock/res/values/slim_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
+  # Dialer
+  -
+    source:      '/lp5.0/packages/apps/Dialer/res/values/slim_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
+  # Email
+  -
+    source:      '/lp5.0/packages/apps/Email/res/values/slim_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
+  # Gallery2
+  -
+    source:      '/lp5.0/packages/apps/Gallery2/res/values/slim_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
+  # Mms
+  -
+    source:      '/lp5.0/packages/apps/Mms/res/values/slim_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
+  # Settings
+  -
+    source:      '/lp5.0/packages/apps/Settings/res/values/slim_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
 
   # SlimCenter
   -
@@ -145,4 +145,57 @@ files:
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
-# Device specific packages
+  # SlimLauncher
+  -
+    source:      '/lp5.0/packages/apps/SlimLauncher/res/values/slim_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
+# providers
+
+  # MediaProvider
+  -
+    source:      '/lp5.0/packages/providers/MediaProvider/res/values/slim_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
+# services
+
+  # MediaProvider
+  -
+    source:      '/lp5.0/packages/services/Telephony/res/values/slim_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
+# Device specific
+  # HTC
+  -
+    source:      '/lp5.0/device/htc/m7-common/DeviceSettings/res/values/arrays.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+  -
+    source:      '/lp5.0/device/htc/m7-common/DeviceSettings/res/values/strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
+  # Samsung
+  -
+    source:      '/lp5.0/device/samsung/p3100/DeviceSettings/res/values/strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+  -
+    source:      '/lp5.0/device/samsung/smdk4412-common/AdvancedDisplay/res/values/arrays.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+  -
+    source:      '/lp5.0/device/samsung/smdk4412-common/AdvancedDisplay/res/values/strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+  -
+    source:      '/lp5.0/device/samsung/smdk4412-common/DeviceSettings/res/values/strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+  -
+    source:      '/lp5.0/device/samsung/smdk4412-common/DeviceSettings/res/values/arrays.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
