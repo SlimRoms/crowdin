@@ -161,7 +161,7 @@ files:
 
 # services
 
-  # MediaProvider
+  # Telephony
   -
     source:      '/lp5.0/packages/services/Telephony/res/values/slim_strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'

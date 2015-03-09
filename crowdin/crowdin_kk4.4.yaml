@@ -1,0 +1,264 @@
+# crowdin_slim.yaml
+#
+# Crowdin configuration file for SlimRoms
+#
+# Copyright (C) 2014 The CyanogenMod Project
+# Modifications Copyright (C) 2014 SlimRoms
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#   http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+project_identifier: SlimRoms
+preserve_hierarchy: true
+
+files:
+# Frameworks
+
+ # framework-res
+  -
+    source:      '/kk4.4/frameworks/base/core/res/res/values/slim_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: &anchor
+      android_code:
+        af: af
+        am: am
+        ar: ar
+        az: az
+        be: be
+        bg: bg
+        ca: ca
+        cs: cs
+        cy: cy
+        da: da
+        de: de
+        el: el
+        es-ES: es
+        et: et
+        fa: fa
+        fi: fi
+        fr: fr
+        he: iw
+        hi: hi
+        hr: hr
+        hu: hu
+        hy-AM: hy
+        id: in
+        it: it
+        ja: ja
+        ka: ka
+        km: km
+        ko: ko
+        lo: lo
+        lt: lt
+        lv: lv
+        mn: mn
+        ms: ms
+        nb: nb
+        ne-NP: ne
+        nl: nl
+        pl: pl
+        rm-CH: rm
+        ro: ro
+        ru: ru
+        si-LK: si
+        sk: sk
+        sl: sl
+        sr: sr
+        sv-SE: sv
+        sw: sw
+        th: th
+        tl: tl
+        tr: tr
+        uk: uk
+        vi: vi
+        zu: zu
+
+ # Keyguard
+  -
+    source:      '/kk4.4/frameworks/base/packages/Keyguard/res/values/slim_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: &anchor
+
+ # SystemUI
+  -
+    source:      '/kk4.4/frameworks/base/packages/SystemUI/res/values/slim_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: &anchor
+
+# Packages
+
+  # Camera2
+  -
+    source:      '/kk4.4/packages/apps/Camera2/res/values/slim_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
+  # ContactsCommon
+  -
+    source:      '/kk4.4/packages/apps/ContactsCommon/res/values/slim_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
+  # DeskClock
+  -
+    source:      '/kk4.4/packages/apps/DeskClock/res/values/slim_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
+  # Dialer
+  -
+    source:      '/kk4.4/packages/apps/Dialer/res/values/slim_plurals.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+  -
+    source:      '/kk4.4/packages/apps/Dialer/res/values/slim_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
+  # DSPManager
+  -
+    source:      '/kk4.4/packages/apps/DSPManager/res/values/arrays.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+  -
+    source:      '/kk4.4/packages/apps/Dialer/res/values/strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
+  # Email
+  -
+    source:      '/kk4.4/packages/apps/Email/res/values/slim_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
+  # Gallery2
+  -
+    source:      '/kk4.4/packages/apps/Gallery2/res/values/slim_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
+  # Gallery2
+  -
+    source:      '/kk4.4/packages/apps/Gallery2/res/values/slim_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
+  # InCallUI
+  -
+    source:      '/kk4.4/packages/apps/InCallUI/res/values/slim_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
+  # Mms
+  -
+    source:      '/kk4.4/packages/apps/Mms/res/values/slim_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
+  # Settings
+  -
+    source:      '/kk4.4/packages/apps/Settings/res/values/slim_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
+  # SlimCenter
+  -
+    source:      '/kk4.4/packages/apps/SlimCenter/res/values/strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
+  # SlimFileManager
+  -
+    source:      '/kk4.4/packages/apps/SlimFileManager/res/values/strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
+  # SlimLauncher
+  -
+    source:      '/kk4.4/packages/apps/SlimLauncher/res/values/slim_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
+  # Torch
+  -
+    source:      '/kk4.4/packages/apps/Torch/res/values/strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
+# providers
+
+  # MediaProvider
+  -
+    source:      '/kk4.4/packages/providers/MediaProvider/res/values/slim_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
+# services
+
+  # Telephony
+  -
+    source:      '/kk4.4/packages/services/Telephony/res/values/slim_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
+# Device specific
+  # HTC
+  -
+    source:      '/kk4.4/device/htc/m7-common/DeviceSettings/res/values/arrays.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+  -
+    source:      '/kk4.4/device/htc/m7-common/DeviceSettings/res/values/strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
+  # Samsung
+  -
+    source:      '/kk4.4/device/samsung/aries-common/AriesParts/res/values/arrays.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+  -
+    source:      '/kk4.4/device/samsung/aries-common/AriesParts/res/values/strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+  -
+    source:      '/kk4.4/device/samsung/i9100g/DeviceSettings/res/values/arrays.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+  -
+    source:      '/kk4.4/device/samsung/i9100g/DeviceSettings/res/values/strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+  -
+    source:      '/kk4.4/device/samsung/p3100/DeviceSettings/res/values/strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+  -
+    source:      '/kk4.4/device/samsung/p5100/DeviceSettings/res/values/strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+  -
+    source:      '/kk4.4/device/samsung/smdk4412-common/AdvancedDisplay/res/values/arrays.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+  -
+    source:      '/kk4.4/device/samsung/smdk4412-common/AdvancedDisplay/res/values/strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+  -
+    source:      '/kk4.4/device/samsung/smdk4412-common/DeviceSettings/res/values/strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+  -
+    source:      '/kk4.4/device/samsung/smdk4412-common/DeviceSettings/res/values/arrays.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
