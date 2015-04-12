@@ -5,7 +5,7 @@ Introduction
 ------------
 This script is used to synchronize SlimRom's translations with Crowdin's. Also, it can handle
 automatic commiting to Gerrit and pushing/downloading to/from Crowdin.
-Based on based on CyanogenMod's sync-script.
+Based on CyanogenMod's sync-script.
 
 Prerequisites
 -------------
