@@ -21,8 +21,12 @@ python-git is used for Git integration.
 
 Executing
 ---------
-Copy all files to the root of your local copy of SlimRom's source code.
-Edit crowdin/config.yaml to set the api key & your current SlimRom path.
+Export the following environment variables to set the API keys and the base path.
+Base path should contain all SlimRoms trees in subfolders, named after SlimRoms branches:
+
+    export SLIM_CROWDIN_API_KEY=your_api_key
+    export SLIM_CROWDIN_BASE_PATH=your_base_path
+
 Execute:
 
     ./crowdin_sync.py --username your_gerrit_username --branch slim_version [--no-download|--no-upload]
