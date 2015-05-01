@@ -86,13 +86,13 @@ files:
   -
     source:      '/kk4.4-caf/frameworks/base/packages/Keyguard/res/values/slim_strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: &anchor
+    languages_mapping: *anchor
 
  # SystemUI
   -
     source:      '/kk4.4-caf/frameworks/base/packages/SystemUI/res/values/slim_strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: &anchor
+    languages_mapping: *anchor
 
 # Packages
 
