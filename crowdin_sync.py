@@ -184,7 +184,7 @@ if not args.no_download:
             continue
 
         # Get project root dir from Crowdin's output by regex
-        m = re.search('/(.*Superuser)/Superuser.*|/(.*LatinIME).*|/(frameworks/base).*|/(device/.*/.*)/.*/res/values.*|/(hardware/.*/.*)/.*/res/values.*|/(.*)/res/values.*', path)
+        m = re.search('/(.*LatinIME).*|/(frameworks/base).*|/(device/.*/.*)/.*/res/values.*|/(hardware/.*/.*)/.*/res/values.*|/(.*)/res/values.*', path)
 
         if not m.groups():
             # Regex result is empty, warn the user
