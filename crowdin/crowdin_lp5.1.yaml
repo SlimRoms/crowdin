@@ -97,6 +97,12 @@ files:
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
+  # InCallUI
+  -
+    source:      '/lp5.1/packages/apps/InCallUI/res/values/slim_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
   # Mms
   -
     source:      '/lp5.1/packages/apps/Mms/res/values/slim_strings.xml'
