@@ -97,6 +97,12 @@ files:
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
+  # Dialer
+  -
+    source:      '/lp5.1/packages/apps/Dialer/res/values/slim_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
   # InCallUI
   -
     source:      '/lp5.1/packages/apps/InCallUI/res/values/slim_strings.xml'
@@ -126,6 +132,12 @@ files:
   # SlimLauncher
   -
     source:      '/lp5.1/packages/apps/SlimLauncher/res/values/slim_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
+  # Telecomm
+  -
+    source:      '/lp5.1/packages/services/Telecomm/res/values/slim_strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
