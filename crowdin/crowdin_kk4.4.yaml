@@ -19,6 +19,7 @@
 
 api_key_env: SLIM_CROWDIN_API_KEY
 base_path_env: SLIM_CROWDIN_BASE_PATH
+base_path_contains_branch_subfolders: true
 project_identifier: SlimRoms
 preserve_hierarchy: true
 

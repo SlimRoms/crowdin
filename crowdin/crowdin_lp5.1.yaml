@@ -19,6 +19,7 @@
 
 api_key_env: SLIM_CROWDIN_API_KEY
 base_path_env: SLIM_CROWDIN_BASE_PATH
+base_path_contains_branch_subfolders: true
 project_identifier: SlimRoms
 preserve_hierarchy: true
 
@@ -27,7 +28,11 @@ files:
 
  # framework-res
   -
+<<<<<<< HEAD:crowdin/crowdin_lp5.1.yaml
     source:      '/lp5.1/frameworks/base/core/res/res/values/slim_strings.xml'
+=======
+    source:      '/frameworks/base/core/res/res/values/custom_strings.xml'
+>>>>>>> 58c7f02... crowdin_sync: Add crowdin branch feature support:crowdin/crowdin_android-5.0.yaml
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: &anchor
       android_code:
@@ -84,9 +89,21 @@ files:
         vi: vi
         zu: zu
 
+<<<<<<< HEAD:crowdin/crowdin_lp5.1.yaml
  # SystemUI
   -
     source:      '/lp5.1/frameworks/base/packages/SystemUI/res/values/slim_strings.xml'
+=======
+ # DocumentsUI
+  -
+    source:      '/frameworks/base/packages/DocumentsUI/res/values/custom_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
+ # SystemUI
+  -
+    source:      '/frameworks/base/packages/SystemUI/res/values/custom_strings.xml'
+>>>>>>> 58c7f02... crowdin_sync: Add crowdin branch feature support:crowdin/crowdin_android-5.0.yaml
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
@@ -95,51 +112,83 @@ files:
 
   # Camera2
   -
+<<<<<<< HEAD:crowdin/crowdin_lp5.1.yaml
     source:      '/lp5.1/packages/apps/Camera2/res/values/slim_strings.xml'
+=======
+    source:      '/packages/apps/Apollo/res/values/plurals.xml'
+>>>>>>> 58c7f02... crowdin_sync: Add crowdin branch feature support:crowdin/crowdin_android-5.0.yaml
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
   # Dialer
   -
+<<<<<<< HEAD:crowdin/crowdin_lp5.1.yaml
     source:      '/lp5.1/packages/apps/Dialer/res/values/slim_strings.xml'
+=======
+    source:      '/packages/apps/Apollo/res/values/strings.xml'
+>>>>>>> 58c7f02... crowdin_sync: Add crowdin branch feature support:crowdin/crowdin_android-5.0.yaml
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
   # InCallUI
   -
+<<<<<<< HEAD:crowdin/crowdin_lp5.1.yaml
     source:      '/lp5.1/packages/apps/InCallUI/res/values/slim_strings.xml'
+=======
+    source:      '/packages/apps/Camera2/res/values/custom_strings.xml'
+>>>>>>> 58c7f02... crowdin_sync: Add crowdin branch feature support:crowdin/crowdin_android-5.0.yaml
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
   # Mms
   -
+<<<<<<< HEAD:crowdin/crowdin_lp5.1.yaml
     source:      '/lp5.1/packages/apps/Mms/res/values/slim_strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
   -
     source:      '/lp5.1/packages/apps/Mms/res/values/slim_plurals.xml'
+=======
+    source:      '/packages/apps/DeskClock/res/values/custom_strings.xml'
+>>>>>>> 58c7f02... crowdin_sync: Add crowdin branch feature support:crowdin/crowdin_android-5.0.yaml
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
   # Settings
   -
+<<<<<<< HEAD:crowdin/crowdin_lp5.1.yaml
     source:      '/lp5.1/packages/apps/Settings/res/values/slim_strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
   -
     source:      '/lp5.1/packages/apps/Settings/res/values/slim_plurals.xml'
+=======
+    source:      '/packages/apps/DSPManager/res/values/arrays.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+  -
+    source:      '/packages/apps/DSPManager/res/values/strings.xml'
+>>>>>>> 58c7f02... crowdin_sync: Add crowdin branch feature support:crowdin/crowdin_android-5.0.yaml
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
   # SlimLauncher
   -
+<<<<<<< HEAD:crowdin/crowdin_lp5.1.yaml
     source:      '/lp5.1/packages/apps/SlimLauncher/res/values/slim_strings.xml'
+=======
+    source:      '/packages/apps/OmniGears/res/values/custom_strings.xml'
+>>>>>>> 58c7f02... crowdin_sync: Add crowdin branch feature support:crowdin/crowdin_android-5.0.yaml
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
   # Telecomm
   -
+<<<<<<< HEAD:crowdin/crowdin_lp5.1.yaml
     source:      '/lp5.1/packages/services/Telecomm/res/values/slim_strings.xml'
+=======
+    source:      '/packages/apps/OpenDelta/res/values/strings.xml'
+>>>>>>> 58c7f02... crowdin_sync: Add crowdin branch feature support:crowdin/crowdin_android-5.0.yaml
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
@@ -147,13 +196,21 @@ files:
 
   # DownloadProvider
   -
+<<<<<<< HEAD:crowdin/crowdin_lp5.1.yaml
     source:      '/lp5.1/packages/providers/DownloadProvider/res/values/slim_strings.xml'
+=======
+    source:      '/packages/apps/SamsungServiceMode/res/values/strings.xml'
+>>>>>>> 58c7f02... crowdin_sync: Add crowdin branch feature support:crowdin/crowdin_android-5.0.yaml
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
   # MediaProvider
   -
+<<<<<<< HEAD:crowdin/crowdin_lp5.1.yaml
     source:      '/lp5.1/packages/providers/MediaProvider/res/values/slim_strings.xml'
+=======
+    source:      '/packages/apps/Settings/res/values/custom_strings.xml'
+>>>>>>> 58c7f02... crowdin_sync: Add crowdin branch feature support:crowdin/crowdin_android-5.0.yaml
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
