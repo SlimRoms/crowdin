@@ -29,7 +29,7 @@ Base path should contain all SlimRoms trees in subfolders, named after SlimRoms 
 
 Execute:
 
-    ./crowdin_sync.py --username your_gerrit_username --branch slim_version [--no-download|--no-upload]
+    ./crowdin_sync.py --username your_gerrit_username --branch slim_version [--upload-sources] [--upload-translations] [--download]
 
 Bugs
 ----
