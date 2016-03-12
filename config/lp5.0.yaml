@@ -1,4 +1,4 @@
-# crowdin_slim.yaml
+# lp5.0.yaml
 #
 # Crowdin configuration file for SlimRoms
 #
@@ -28,7 +28,7 @@ files:
  # framework-res
   -
 <<<<<<< HEAD:crowdin/crowdin_lp5.0.yaml
-    source:      '/lp5.0/frameworks/base/core/res/res/values/slim_strings.xml'
+    source:      '/frameworks/base/core/res/res/values/slim_strings.xml'
 =======
     source:      '/frameworks/base/core/res/res/values/custom_strings.xml'
 >>>>>>> 58c7f02... crowdin_sync: Add crowdin branch feature support:crowdin/crowdin_android-6.0.yaml
@@ -91,7 +91,7 @@ files:
  # Keyguard
   -
 <<<<<<< HEAD:crowdin/crowdin_lp5.0.yaml
-    source:      '/lp5.0/frameworks/base/packages/Keyguard/res/values/slim_strings.xml'
+    source:      '/frameworks/base/packages/Keyguard/res/values/slim_strings.xml'
 =======
     source:      '/frameworks/base/packages/DocumentsUI/res/values/custom_strings.xml'
 >>>>>>> 58c7f02... crowdin_sync: Add crowdin branch feature support:crowdin/crowdin_android-6.0.yaml
@@ -101,7 +101,7 @@ files:
  # SystemUI
   -
 <<<<<<< HEAD:crowdin/crowdin_lp5.0.yaml
-    source:      '/lp5.0/frameworks/base/packages/SystemUI/res/values/slim_strings.xml'
+    source:      '/frameworks/base/packages/SystemUI/res/values/slim_strings.xml'
 =======
     source:      '/frameworks/base/packages/SystemUI/res/values/custom_strings.xml'
 >>>>>>> 58c7f02... crowdin_sync: Add crowdin branch feature support:crowdin/crowdin_android-6.0.yaml
@@ -114,7 +114,7 @@ files:
   # Contacts
   -
 <<<<<<< HEAD:crowdin/crowdin_lp5.0.yaml
-    source:      '/lp5.0/packages/apps/Contacts/res/values/slim_strings.xml'
+    source:      '/packages/apps/Contacts/res/values/slim_strings.xml'
 =======
     source:      '/packages/apps/Apollo/res/values/plurals.xml'
 >>>>>>> 58c7f02... crowdin_sync: Add crowdin branch feature support:crowdin/crowdin_android-6.0.yaml
@@ -124,7 +124,7 @@ files:
   # DeskClock
   -
 <<<<<<< HEAD:crowdin/crowdin_lp5.0.yaml
-    source:      '/lp5.0/packages/apps/DeskClock/res/values/slim_strings.xml'
+    source:      '/packages/apps/DeskClock/res/values/slim_strings.xml'
 =======
     source:      '/packages/apps/Apollo/res/values/strings.xml'
 >>>>>>> 58c7f02... crowdin_sync: Add crowdin branch feature support:crowdin/crowdin_android-6.0.yaml
@@ -134,7 +134,7 @@ files:
   # Dialer
   -
 <<<<<<< HEAD:crowdin/crowdin_lp5.0.yaml
-    source:      '/lp5.0/packages/apps/Dialer/res/values/slim_strings.xml'
+    source:      '/packages/apps/Dialer/res/values/slim_strings.xml'
 =======
     source:      '/packages/apps/Camera2/res/values/custom_strings.xml'
 >>>>>>> 58c7f02... crowdin_sync: Add crowdin branch feature support:crowdin/crowdin_android-6.0.yaml
@@ -144,7 +144,7 @@ files:
   # Email
   -
 <<<<<<< HEAD:crowdin/crowdin_lp5.0.yaml
-    source:      '/lp5.0/packages/apps/Email/res/values/slim_strings.xml'
+    source:      '/packages/apps/Email/res/values/slim_strings.xml'
 =======
     source:      '/packages/apps/DeskClock/res/values/custom_strings.xml'
 >>>>>>> 58c7f02... crowdin_sync: Add crowdin branch feature support:crowdin/crowdin_android-6.0.yaml
@@ -154,7 +154,7 @@ files:
   # Gallery2
   -
 <<<<<<< HEAD:crowdin/crowdin_lp5.0.yaml
-    source:      '/lp5.0/packages/apps/Gallery2/res/values/slim_strings.xml'
+    source:      '/packages/apps/Gallery2/res/values/slim_strings.xml'
 =======
     source:      '/packages/apps/DSPManager/res/values/arrays.xml'
 >>>>>>> 58c7f02... crowdin_sync: Add crowdin branch feature support:crowdin/crowdin_android-6.0.yaml
@@ -164,7 +164,7 @@ files:
   # Mms
   -
 <<<<<<< HEAD:crowdin/crowdin_lp5.0.yaml
-    source:      '/lp5.0/packages/apps/Mms/res/values/slim_strings.xml'
+    source:      '/packages/apps/Mms/res/values/slim_strings.xml'
 =======
     source:      '/packages/apps/DSPManager/res/values/strings.xml'
 >>>>>>> 58c7f02... crowdin_sync: Add crowdin branch feature support:crowdin/crowdin_android-6.0.yaml
@@ -174,7 +174,7 @@ files:
   # Settings
   -
 <<<<<<< HEAD:crowdin/crowdin_lp5.0.yaml
-    source:      '/lp5.0/packages/apps/Settings/res/values/slim_strings.xml'
+    source:      '/packages/apps/Settings/res/values/slim_strings.xml'
 =======
     source:      '/packages/apps/Launcher3/res/values/custom_strings.xml'
 >>>>>>> 58c7f02... crowdin_sync: Add crowdin branch feature support:crowdin/crowdin_android-6.0.yaml
@@ -184,7 +184,7 @@ files:
   # SlimCenter
   -
 <<<<<<< HEAD:crowdin/crowdin_lp5.0.yaml
-    source:      '/lp5.0/packages/apps/SlimCenter/res/values/strings.xml'
+    source:      '/packages/apps/SlimCenter/res/values/strings.xml'
 =======
     source:      '/packages/apps/OmniGears/res/values/custom_strings.xml'
 >>>>>>> 58c7f02... crowdin_sync: Add crowdin branch feature support:crowdin/crowdin_android-6.0.yaml
@@ -194,7 +194,7 @@ files:
   # SlimLauncher
   -
 <<<<<<< HEAD:crowdin/crowdin_lp5.0.yaml
-    source:      '/lp5.0/packages/apps/SlimLauncher/res/values/slim_strings.xml'
+    source:      '/packages/apps/SlimLauncher/res/values/slim_strings.xml'
 =======
     source:      '/packages/services/OmniJaws/res/values/strings.xml'
 >>>>>>> 58c7f02... crowdin_sync: Add crowdin branch feature support:crowdin/crowdin_android-6.0.yaml
@@ -206,7 +206,7 @@ files:
   # MediaProvider
   -
 <<<<<<< HEAD:crowdin/crowdin_lp5.0.yaml
-    source:      '/lp5.0/packages/providers/MediaProvider/res/values/slim_strings.xml'
+    source:      '/packages/providers/MediaProvider/res/values/slim_strings.xml'
 =======
     source:      '/packages/apps/OmniSwitch/res/values/strings.xml'
 >>>>>>> 58c7f02... crowdin_sync: Add crowdin branch feature support:crowdin/crowdin_android-6.0.yaml
@@ -218,7 +218,7 @@ files:
   # Telephony
   -
 <<<<<<< HEAD:crowdin/crowdin_lp5.0.yaml
-    source:      '/lp5.0/packages/services/Telephony/res/values/slim_strings.xml'
+    source:      '/packages/services/Telephony/res/values/slim_strings.xml'
 =======
     source:      '/packages/apps/OpenDelta/res/values/strings.xml'
 >>>>>>> 58c7f02... crowdin_sync: Add crowdin branch feature support:crowdin/crowdin_android-6.0.yaml
@@ -229,11 +229,11 @@ files:
   # HTC
   -
 <<<<<<< HEAD:crowdin/crowdin_lp5.0.yaml
-    source:      '/lp5.0/device/htc/m7-common/DeviceSettings/res/values/arrays.xml'
+    source:      '/device/htc/m7-common/DeviceSettings/res/values/arrays.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
   -
-    source:      '/lp5.0/device/htc/m7-common/DeviceSettings/res/values/strings.xml'
+    source:      '/device/htc/m7-common/DeviceSettings/res/values/strings.xml'
 =======
     source:      '/packages/apps/Settings/res/values/custom_strings.xml'
 >>>>>>> 58c7f02... crowdin_sync: Add crowdin branch feature support:crowdin/crowdin_android-6.0.yaml
@@ -243,23 +243,23 @@ files:
   # Samsung
   -
 <<<<<<< HEAD:crowdin/crowdin_lp5.0.yaml
-    source:      '/lp5.0/device/samsung/p3100/DeviceSettings/res/values/strings.xml'
+    source:      '/device/samsung/p3100/DeviceSettings/res/values/strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
   -
-    source:      '/lp5.0/device/samsung/smdk4412-common/AdvancedDisplay/res/values/arrays.xml'
+    source:      '/device/samsung/smdk4412-common/AdvancedDisplay/res/values/arrays.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
   -
-    source:      '/lp5.0/device/samsung/smdk4412-common/AdvancedDisplay/res/values/strings.xml'
+    source:      '/device/samsung/smdk4412-common/AdvancedDisplay/res/values/strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
   -
-    source:      '/lp5.0/device/samsung/smdk4412-common/DeviceSettings/res/values/strings.xml'
+    source:      '/device/samsung/smdk4412-common/DeviceSettings/res/values/strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
   -
-    source:      '/lp5.0/device/samsung/smdk4412-common/DeviceSettings/res/values/arrays.xml'
+    source:      '/device/samsung/smdk4412-common/DeviceSettings/res/values/arrays.xml'
 =======
     source:      '/packages/apps/SnapdragonCamera/res/values/strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'

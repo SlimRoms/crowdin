@@ -1,4 +1,4 @@
-# crowdin_slim.yaml
+# lp5.0-caf.yaml
 #
 # Crowdin configuration file for SlimRoms
 #
@@ -28,7 +28,7 @@ files:
 
  # framework-res
   -
-    source:      '/kk4.4-caf/frameworks/base/core/res/res/values/slim_strings.xml'
+    source:      '/lp5.0-caf-caf/frameworks/base/core/res/res/values/slim_strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: &anchor
       android_code:
@@ -87,20 +87,39 @@ files:
 
  # Keyguard
   -
-    source:      '/kk4.4-caf/frameworks/base/packages/Keyguard/res/values/slim_strings.xml'
+    source:      '/lp5.0-caf-caf/frameworks/base/packages/Keyguard/res/values/slim_strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
  # SystemUI
   -
-    source:      '/kk4.4-caf/frameworks/base/packages/SystemUI/res/values/slim_strings.xml'
+    source:      '/lp5.0-caf-caf/frameworks/base/packages/SystemUI/res/values/slim_strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
+
 # Packages
+
+  # Contacts
+  -
+    source:      '/lp5.0-caf-caf/packages/apps/Contacts/res/values/slim_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
+  # Dialer
+  -
+    source:      '/lp5.0-caf-caf/packages/apps/Dialer/res/values/slim_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
+  # Mms
+  -
+    source:      '/lp5.0-caf-caf/packages/apps/Mms/res/values/slim_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
 
   # Settings
   -
-    source:      '/kk4.4-caf/packages/apps/Settings/res/values/slim_strings.xml'
+    source:      '/lp5.0-caf-caf/packages/apps/Settings/res/values/slim_strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
