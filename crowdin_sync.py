@@ -6,7 +6,7 @@
 # directly to SlimRom's Gerrit.
 #
 # Copyright (C) 2014 The CyanogenMod Project
-# Modifications Copyright (C) 2014 SlimRoms
+# Modifications Copyright (C) 2014 - 2017 SlimRoms
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -300,7 +300,7 @@ def main():
     if not check_dependencies():
         sys.exit(1)
 
-    xml_android = load_xml(x='%s/platform_manifest/default.xml' % base_path)
+    xml_android = load_xml(x='%s/platform_manifest/snippets/slim.xml' % base_path)
     if xml_android is None:
         sys.exit(1)
 
