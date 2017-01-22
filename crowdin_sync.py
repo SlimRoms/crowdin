@@ -285,15 +285,15 @@ def main():
     args = parse_args()
     default_branch = args.branch
 
-    base_path = os.getenv('OMNI_CROWDIN_BASE_PATH')
+    base_path = os.getenv('SLIM_CROWDIN_BASE_PATH')
     if base_path is None:
         cwd = os.getcwd()
-        print('You have not set OMNI_CROWDIN_BASE_PATH. Defaulting to %s' % cwd)
+        print('You have not set SLIM_CROWDIN_BASE_PATH. Defaulting to %s' % cwd)
         base_path = cwd
     else:
         base_path = os.path.join(os.path.realpath(base_path), default_branch)
     if not os.path.isdir(base_path):
-        print('OMNI_CROWDIN_BASE_PATH + branch is not a real directory: %s'
+        print('SLIM_CROWDIN_BASE_PATH + branch is not a real directory: %s'
               % base_path)
         sys.exit(1)
 
